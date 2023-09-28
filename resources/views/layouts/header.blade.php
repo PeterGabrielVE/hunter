@@ -4,30 +4,23 @@
      
       <ul class="navbar-nav navbar-nav-left header-links">
           <li>
-            <a class="navbar-brand brand-logo" href="{{ url('/') }}">
-                <img src="{{ url('assets/images/hunter-logo.png') }}" alt="logo" width="100" height="100"/> 
+            <a class="navbar-brand brand-logo pb-4 mb-4" href="{{ url('/') }}">
+                <img class="pb-4" src="{{ url('assets/images/hunter-logo.png') }}" alt="logo" width="150" height="150"/> 
             </a>
           </li>
         <li class="nav-item d-none d-xl-flex">
-          <a href="#" class="nav-link">Schedule <span class="badge badge-primary ml-1">New</span>
+          <a href="#" class="nav-link">Mensajes <span class="badge badge-primary ml-1">1</span>
           </a>
         </li>
         <li class="nav-item active d-none d-lg-flex">
           <a href="#" class="nav-link">
-            <i class="mdi mdi-elevation-rise"></i>Reports</a>
+            <i class="mdi mdi-elevation-rise"></i>Usuarios</a>
         </li>
         <li class="nav-item d-none d-md-flex">
           <a href="#" class="nav-link">
-            <i class="mdi mdi-bookmark-plus-outline"></i>Score</a>
+            <i class="mdi mdi-bookmark-plus-outline"></i>Estadisticas</a>
         </li>
-        <li class="nav-item dropdown d-none d-lg-flex">
-          <a class="nav-link dropdown-toggle px-0" id="quickDropdown" href="#" data-toggle="dropdown" aria-expanded="false"> Quick Links </a>
-          <div class="dropdown-menu dropdown-menu-right navbar-dropdown pt-3" aria-labelledby="quickDropdown">
-            <a href="#" class="dropdown-item">Schedule <span class="badge badge-primary ml-1">New</span></a>
-            <a href="#" class="dropdown-item"><i class="mdi mdi-elevation-rise"></i>Reports</a>
-            <a href="#" class="dropdown-item"><i class="mdi mdi-bookmark-plus-outline"></i>Score</a>
-          </div>
-        </li>
+       
       </ul>
       <ul class="navbar-nav navbar-nav-right">
         <li class="nav-item dropdown">
@@ -36,10 +29,7 @@
             <span class="count">7</span>
           </a>
           <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0" aria-labelledby="messageDropdown">
-            <a class="dropdown-item py-3">
-              <p class="mb-0 font-weight-medium float-left">You have 7 unread mails </p>
-              <span class="badge badge-pill badge-primary float-right">View all</span>
-            </a>
+            
             <div class="dropdown-divider"></div>
             <a class="dropdown-item preview-item">
               <div class="preview-thumbnail">

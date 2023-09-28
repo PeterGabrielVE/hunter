@@ -28,9 +28,8 @@
 </head>
 <body>
     <div id="app">
-        @include('layouts.header')
-
-        <main class="py-4">
+      
+        <main class="py-4" style="margin-top: 10rem">
             @yield('content')
         </main>
     </div>
