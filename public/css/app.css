@@ -17848,7 +17848,8 @@ small {
   -webkit-transition: left 0.25s ease, width 0.25s ease;
   -moz-transition: left 0.25s ease, width 0.25s ease;
   -ms-transition: left 0.25s ease, width 0.25s ease;
-  background: linear-gradient(120deg, #2f78e9, #128bfc, #18bef1);
+  background: #296cbf;
+  /*background: linear-gradient(120deg, #2f78e9, #128bfc, #18bef1);*/
 }
 
 .navbar .navbar-brand-wrapper {

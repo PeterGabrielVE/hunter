@@ -22,6 +22,7 @@
 
     <!-- common css -->
     {!! Html::style('css/app.css') !!}
+    {!! Html::style('assets/css/input-file.css') !!}
     <!-- end common css -->
 
     @stack('style')
@@ -47,6 +48,7 @@
     {!! Html::script('assets/js/misc.js') !!}
     {!! Html::script('assets/js/settings.js') !!}
     {!! Html::script('assets/js/todolist.js') !!}
+    {!! Html::script('assets/js/file-input.js') !!}
     <!-- end common js -->
   
     @stack('custom-scripts')

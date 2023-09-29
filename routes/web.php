@@ -14,14 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('material', function () { return view('layouts.material'); });
+Route::get('scanner', [App\Http\Controllers\ScannerController::class, 'index'])->name('scanner');
+Route::post('scanner', [App\Http\Controllers\ScannerController::class, 'store'])->name('scanner_post');
