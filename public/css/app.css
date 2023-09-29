@@ -17917,8 +17917,9 @@ small {
   color: #fff;
   padding-left: 15px;
   padding-right: 15px;
+  padding-bottom: 140px;
   width: calc(100% - 255px);
-  height: 63px;
+  height: 200px;
 }
 
 @media (max-width: 991px) {
