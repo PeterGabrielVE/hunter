@@ -501,6 +501,102 @@
                 options: doughnutPieOptions
             });
         }
+        if ($("#UsersDoughnutChart2").length) {
+            var doughnutChartCanvas = $("#UsersDoughnutChart2")
+                .get(0)
+                .getContext("2d");
+            var doughnutPieData = {
+                datasets: [
+                    {
+                        data: [80, 34, 100],
+                        backgroundColor: [
+                            successColor,
+                            primaryColor,
+                            secondaryColor
+                        ],
+                        borderColor: [
+                            successColor,
+                            primaryColor,
+                            secondaryColor
+                        ]
+                    }
+                ],
+                labels: ["Request", "Email"]
+            };
+            var doughnutPieOptions = {
+                cutoutPercentage: 70,
+                animationEasing: "easeOutBounce",
+                animateRotate: true,
+                animateScale: false,
+                responsive: true,
+                maintainAspectRatio: true,
+                showScale: true,
+                legend: {
+                    display: false
+                },
+                layout: {
+                    padding: {
+                        left: 0,
+                        right: 0,
+                        top: 0,
+                        bottom: 0
+                    }
+                }
+            };
+            var doughnutChart = new Chart(doughnutChartCanvas, {
+                type: "doughnut",
+                data: doughnutPieData,
+                options: doughnutPieOptions
+            });
+        }
+        if ($("#UsersDoughnutChart3").length) {
+            var doughnutChartCanvas = $("#UsersDoughnutChart3")
+                .get(0)
+                .getContext("2d");
+            var doughnutPieData = {
+                datasets: [
+                    {
+                        data: [80, 34, 100],
+                        backgroundColor: [
+                            successColor,
+                            primaryColor,
+                            secondaryColor
+                        ],
+                        borderColor: [
+                            successColor,
+                            primaryColor,
+                            secondaryColor
+                        ]
+                    }
+                ],
+                labels: ["Request", "Email"]
+            };
+            var doughnutPieOptions = {
+                cutoutPercentage: 70,
+                animationEasing: "easeOutBounce",
+                animateRotate: true,
+                animateScale: false,
+                responsive: true,
+                maintainAspectRatio: true,
+                showScale: true,
+                legend: {
+                    display: false
+                },
+                layout: {
+                    padding: {
+                        left: 0,
+                        right: 0,
+                        top: 0,
+                        bottom: 0
+                    }
+                }
+            };
+            var doughnutChart = new Chart(doughnutChartCanvas, {
+                type: "doughnut",
+                data: doughnutPieData,
+                options: doughnutPieOptions
+            });
+        }
         if ($("#conversionBarChart").length) {
             var barChartCanvas = $("#conversionBarChart")
                 .get(0)
