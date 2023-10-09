@@ -6,8 +6,8 @@
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
         <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Inicio</a></li>
-            <li class="breadcrumb-item"><a href="#">Captura de Datos</a></li>
+            <li class="breadcrumb-item"><a href="{{ route('home')}}">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="{{ route('scanner')}}" >Captura de Datos</a></li>
         </ol>
         </nav>
     </div>
@@ -76,10 +76,10 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xl-8">
-                        <form method="POST" action="{{ route('scanner_post') }}" enctype="multipart/form-data">
+                        <form method="POST" action="#" enctype="multipart/form-data">
                             @csrf
                             <div class="file-upload-contain">
-                                <input data="multiplefileupload" name="file" type="file" accept=".jpg,.jpeg,.gif,.png" />
+                                <input id="multiplefileupload" data="multiplefileupload" name="file" type="file" accept=".jpg,.jpeg,.gif,.png"  onChange='inform()'/>
                             </div>
                             <div class="text-right">
                                 <button class="btn btn-success" type="submit">Escanear</button>
@@ -100,8 +100,25 @@
 @push('plugin-scripts')
   {!! Html::script('/assets/plugins/chartjs/chart.min.js') !!}
   {!! Html::script('/assets/plugins/jquery-sparkline/jquery.sparkline.min.js') !!}
+  {!! Html::script('https://unpkg.com/tesseract.js@2.0.0-alpha.7/dist/tesseract.min.js') !!}
+
+  <script>
+
+function inform(){
+    let $mi_input = document.querySelector("#multiplefileupload");
+
+    const worker = new Tesseract.TesseractWorker();
+
+    let imagen = $mi_input.files[0];
+    console.log(imagen)
+    const text = worker.recognize(imagen);
+  console.log(text);
+}
+</script>
 @endpush
 
 @push('custom-scripts')
   {!! Html::script('/assets/js/dashboard.js') !!}
 @endpush
+
+

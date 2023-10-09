@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use thiagoalessio\TesseractOCR\TesseractOCR;
 
 class ScannerController extends Controller
 {
@@ -41,10 +42,16 @@ class ScannerController extends Controller
 
         $fileName = $request->file->getClientOriginalName();
         $filePath = 'uploads/' . $fileName;
-
+        $tmp = tempnam(sys_get_temp_dir(), 'data');
         $path = Storage::disk('public')->put($filePath, file_get_contents($request->file));
         $path = Storage::disk('public')->url($path);
-
+        //dd($filePath);
+        $dir = "storage/tempdir";
+        echo (new TesseractOCR($fileName))
+        ->run();
+        // Set the language of the text in the image
+      
+        dd('hi');
         // Perform the database operation here
 
         return back()

@@ -10,8 +10,8 @@
   <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Inicio</a></li>
-        <li class="breadcrumb-item"><a href="#">Captura de Datos</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('home')}}">Inicio</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('scanner')}}" >Captura de Datos</a></li>
       </ol>
     </nav>
   </div>
@@ -23,8 +23,8 @@
             <i class="mdi mdi-laptop text-info icon-lg"></i>
             <div class="fluid-container">
               <p class="text-muted mt-3 mb-0 text-left text-md-center text-xl-left">
-              Captura de Datos</p>
-              <h3 class="font-weight-medium text-left mb-0">Escaneo de Pasaportes</h3>
+              Datos Estadísticos</p>
+              <h3 class="font-weight-medium text-left mb-0">Dashboard</h3>
             </div>
           </div>
         </div>
